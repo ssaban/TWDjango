@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+{% extends 'rango/base.html' %}
+
+{% load static %} <!-- New line -->
+
+{% block title %}Restricted Page{% endblock %}
+{% block body_block %}
+      <h1>{{logged_in_msg }}</h1>
+{% endblock %}

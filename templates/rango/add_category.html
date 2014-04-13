@@ -4,14 +4,11 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
-    <head>
-        <title>Rango</title>
-    </head>
+{% extends 'rango/base.html' %}
+{% block title %}Rango Add Category{% endblock %}
 
-    <body>
-        <h1>Add a Category</h1>
-
+{% block body_block %}
+    <h1>Add a Category</h1>
         <form id="category_form" method="post" action="/rango/add_category/">
 
             {% csrf_token %}
@@ -27,6 +24,6 @@ and open the template in the editor.
 
             <input type="submit" name="submit" value="Create Category" />
         </form>
-    </body>
+    
 
-</html>
+{% endblock %}
