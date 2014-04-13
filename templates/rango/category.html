@@ -24,8 +24,10 @@ and open the template in the editor.
         {% else %}
             The specified category {{ category_name }} does not exist!
         {% endif %}
+        <ul>
         <strong>Add Page to Category: {{category_name }} </strong>
-        <a href= "/rango/category/{{category_name_url }}/add_page/">Add page to {{ category_name_url }}</a>
+        </ul>
+        <a href= "/rango/category/{{category_name_url }}/add_page/">Form to Add page to {{ category_name_url }}</a>
    
     </body>
 </html>
