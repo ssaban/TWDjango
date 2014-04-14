@@ -8,6 +8,7 @@ and open the template in the editor.
 {% extends 'rango/base.html' %}
 {% block title %}Rango Add Page{% endblock %}
 {% block body_block %}
+<div class="hero-unit">
         <h1>Add a Page to {{category_name}} </h1>
 
         <form id="add_page_form" method="post" action="/rango/category/{{category_name}}/add_page/">
@@ -25,7 +26,7 @@ and open the template in the editor.
 
             <input type="submit" name="submit" value="Add Page" />
         </form>
-
+</div>
 {% endblock %}
 
 

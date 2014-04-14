@@ -8,6 +8,7 @@ and open the template in the editor.
 {% block title %}Rango Add Category{% endblock %}
 
 {% block body_block %}
+<div class="hero-unit">
     <h1>Add a Category</h1>
         <form id="category_form" method="post" action="/rango/add_category/">
 
@@ -25,5 +26,5 @@ and open the template in the editor.
             <input type="submit" name="submit" value="Create Category" />
         </form>
     
-
+</div>
 {% endblock %}
