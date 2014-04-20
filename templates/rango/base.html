@@ -6,6 +6,7 @@ and open the template in the editor.
 -->
 {% load static %}
 
+
 <html>
     <head>
         <title>{% block title %}How to Tango with Django!{% endblock %}</title>
@@ -47,7 +48,12 @@ and open the template in the editor.
                             <li><a href="/rango/add_category/">Add Category</a></li>
                         {% endif %}
                             <li><a href="/rango/about/">About</a></li>
+                        <!-- remove global search 
                             <li><a href="/rango/search/">Search</a></li>
+                        -->
+                        {% if user.is_authenticated %}
+                            <li><a href="/rango/profile">Profile</a></li>
+                        {% endif %}
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
@@ -57,7 +63,8 @@ and open the template in the editor.
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="span3">
-                <div class="well sidebar-nav">
+               <div class="well sidebar-nav">
+                   {% include "rango/category_list.html" %}
                     <!--- Empty for the timebeing -->
                 </div>
                 <!--/.well -->

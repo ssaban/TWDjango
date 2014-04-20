@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+{% block side_bar %}
+    
+   {% if categories %}
+        <strong>categories at present:</strong>
+        <ul>
+            {% for category in categories %}
+            <li><a href="/rango/category/{{ category.url }}">{{ category.name }}</a></li>
+            {% endfor %}
+        </ul>
+   
+   {% else %}
+        <strong>No categories at present.</strong>
+   {% endif %}
+                    
+
+{% endblock %}

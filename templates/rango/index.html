@@ -22,7 +22,7 @@
         <h2>Top Five Categories</h2>
         {% if categories %}
         <ul>
-            {% for category in categories %}
+            {% for category in top_five_categories %}
             <li><a href="/rango/category/{{ category.url }}">{{ category.name }}</a></li>
             {% endfor %}
         </ul>
