@@ -64,8 +64,21 @@ and open the template in the editor.
         <div class="row-fluid">
             <div class="span3">
                <div class="well sidebar-nav">
-                   {% include "rango/category_list.html" %}
-                    <!--- Empty for the timebeing -->
+                   
+                   <ul class="nav nav-list">
+			<li class="nav-header">Find a Category</li>
+			<form>
+			<label></label>
+			<li><input  class="search-query span10" type="text" name="suggestion" value="" id="suggestion" /></li>
+			</form>
+                    </ul>
+             
+                    {% if categories %}
+                        <div id="cats">
+			    {% include 'rango/category_list.html' with categories=cat_list %}
+                        </div>
+                    {% endif %}
+                   
                 </div>
                 <!--/.well -->
             </div>
@@ -89,5 +102,6 @@ and open the template in the editor.
         
         <script src="{% static 'js/jquery.js' %}"></script>
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/rango-ajax.js' %}"></script>
     </body>
 </html>
